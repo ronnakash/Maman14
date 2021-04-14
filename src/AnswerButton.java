@@ -6,8 +6,10 @@ public class AnswerButton extends JButton implements MouseListener {
     boolean correct;
     TriviaGame game;
 
-    public AnswerButton(String answerString, int idx){
+    public AnswerButton(String answerString, int idx, TriviaGame game){
         super(answerString);
+        this.game = game;
+        addMouseListener(this);
         correct = idx == 0;
         setSize(100,40);
     }
@@ -15,6 +17,7 @@ public class AnswerButton extends JButton implements MouseListener {
     //TODO: ask weather to present next question
     @Override
     public void mouseClicked(MouseEvent e) {
+        game.questionPanel.questionTimer.timer.stop();
         if (correct)
             JOptionPane.showConfirmDialog(null, "Correct!", "Trivia", JOptionPane.CLOSED_OPTION);
         else

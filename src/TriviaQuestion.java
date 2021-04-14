@@ -8,18 +8,14 @@ public class TriviaQuestion {
 
 
     public TriviaQuestion(Scanner scanner){
+        answers = new String[4];
         if(scanner.hasNext()){
-            question = scanner.next();
+            question = scanner.nextLine();
             for (int i=0; scanner.hasNext() && i<4; i++){
-                answers[i] = scanner.next();
+                answers[i] = scanner.nextLine();
             }
         }
-        if (answers[3]!=null){
 
-
-
-
-        }
 
 
 
