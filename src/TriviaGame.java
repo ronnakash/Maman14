@@ -39,7 +39,7 @@ public class TriviaGame extends JFrame {
     public void nextQuestion(){
         if (!listIterator.hasNext()){
             JOptionPane.showConfirmDialog(null, "Out of questions", "Trivia", JOptionPane.CLOSED_OPTION);
-            System.exit(0);
+            endGame();
         }
         if (questionPanel != null)
             remove(questionPanel);
@@ -52,6 +52,13 @@ public class TriviaGame extends JFrame {
         add(answersPanel);
         answersPanel.setLocation(0,200);
         repaint();
+        setSize(600,401);
+        setSize(800,600);
+    }
+
+    public void endGame(){
+        JOptionPane.showConfirmDialog(null,"Thanks for playing!", "Trivia", JOptionPane.CLOSED_OPTION);
+        System.exit(0);
     }
 
 }
