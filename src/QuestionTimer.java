@@ -12,7 +12,6 @@ public class QuestionTimer implements ActionListener{
         timeLeft = 30;
         this.questionPanel = questionPanel;
         timer.setRepeats(true);
-        timer.addActionListener(this);
         timer.start();
     }
 
