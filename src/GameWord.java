@@ -23,7 +23,8 @@ public class GameWord {
             game.wordPanel.repaint();
         } else
             failedAttempts++;
-        if (failedAttempts==5){
+            game.wordPanel.repaint();
+        if (failedAttempts==6){
             JOptionPane.showConfirmDialog(null, "Oops! you've ran out of attempts", "Hangman", JOptionPane.CLOSED_OPTION);
             System.exit(0);
         }

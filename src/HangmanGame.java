@@ -7,10 +7,13 @@ public class HangmanGame extends JFrame {
 
 
     public HangmanGame() {
-        wordPanel = new WordPanel("ihatejavafx", this);
-        setSize(850, 600);
-        setLayout(new GridLayout(2, 1));
         keyboard = new Keyboard(this);
+        wordPanel = new WordPanel("ihatejavafx", this);
+        FlowLayout layout = new FlowLayout();
+        setSize(830, 630);
+        setLayout(layout);
+        layout.setHgap(0);
+        layout.setVgap(0);
         add(wordPanel);
         add(keyboard);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

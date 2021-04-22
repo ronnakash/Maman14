@@ -8,7 +8,7 @@ public class Keyboard extends JPanel {
     public Keyboard(HangmanGame game) {
         this.game = game;
         int x = 50, y = 20;
-        setSize(925, 190);
+        setPreferredSize(new Dimension(830,230));
         setLayout(null);
         setBackground(Color.GRAY);
         JButton[] buttons = new JButton[26];
