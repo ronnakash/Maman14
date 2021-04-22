@@ -15,6 +15,7 @@ public class HangmanGame extends JFrame {
         add(keyboard);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
+        
     }
 
     public static void main(String[] args) {

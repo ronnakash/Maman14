@@ -11,7 +11,7 @@ public class AnswersPanel extends JPanel {
     public AnswersPanel(TriviaGame game) {
         this.game = game;
         setLayout(new GridLayout(2, 2));
-        setSize(600, 400);
+        setSize(400, 200);
         addAnswerButtons(game.questionPanel.triviaQuestion.answers);
     }
 

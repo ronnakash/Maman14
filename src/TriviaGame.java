@@ -26,7 +26,7 @@ public class TriviaGame extends JFrame {
         listIterator = triviaQuestionsList.iterator();
         setLayout(new GridLayout(2,1));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(800,600);
+        setSize(500,500);
         setVisible(true);
         nextQuestion();
         }
@@ -53,7 +53,7 @@ public class TriviaGame extends JFrame {
         answersPanel.setLocation(0,200);
         repaint();
         setSize(600,401);
-        setSize(800,600);
+        setSize(600,400);
     }
 
     public void endGame(){

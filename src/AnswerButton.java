@@ -11,7 +11,7 @@ public class AnswerButton extends JButton implements MouseListener {
         this.game = game;
         addMouseListener(this);
         correct = idx == 0;
-        setSize(100,40);
+        setSize(50,40);
 
     }
 
