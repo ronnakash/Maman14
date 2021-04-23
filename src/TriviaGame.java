@@ -38,7 +38,7 @@ public class TriviaGame extends JFrame {
 
     public void nextQuestion(){
         if (!listIterator.hasNext()){
-            JOptionPane.showConfirmDialog(null, "Out of questions", "Trivia", JOptionPane.CLOSED_OPTION);
+            JOptionPane.showConfirmDialog(null, "Out of questions", "Trivia", JOptionPane.DEFAULT_OPTION);
             endGame();
         }
         if (questionPanel != null)
@@ -57,8 +57,13 @@ public class TriviaGame extends JFrame {
     }
 
     public void endGame(){
-        JOptionPane.showConfirmDialog(null,"Thanks for playing!", "Trivia", JOptionPane.CLOSED_OPTION);
+        JOptionPane.showConfirmDialog(null,"Thanks for playing!", "Trivia", JOptionPane.DEFAULT_OPTION);
         System.exit(0);
     }
+
+
+
+
+
 
 }

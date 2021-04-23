@@ -25,12 +25,12 @@ public class GameWord {
             failedAttempts++;
             game.wordPanel.repaint();
         if (failedAttempts==6){
-            JOptionPane.showConfirmDialog(null, "Oops! you've ran out of attempts", "Hangman", JOptionPane.CLOSED_OPTION);
-            System.exit(0);
+            JOptionPane.showConfirmDialog(null, "Oops! you've ran out of attempts", "Hangman", JOptionPane.DEFAULT_OPTION);
+            game.askForNext();
         }
         if (revealedString.indexOf('_') == -1) {
-            JOptionPane.showConfirmDialog(null, "You got it!", "Hangman", JOptionPane.CLOSED_OPTION);
-            System.exit(0);
+            JOptionPane.showConfirmDialog(null, "You got it!", "Hangman", JOptionPane.DEFAULT_OPTION);
+            game.askForNext();
         }
     }
 

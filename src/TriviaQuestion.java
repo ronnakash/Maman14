@@ -1,10 +1,8 @@
-import javax.swing.*;
 import java.util.Scanner;
 
 public class TriviaQuestion {
     String question;
     String[] answers;
-    QuestionPanel questionPanel;
 
 
     public TriviaQuestion(Scanner scanner){
@@ -16,10 +14,6 @@ public class TriviaQuestion {
             }
         }
 
-
-
-
     }
-
 
 }

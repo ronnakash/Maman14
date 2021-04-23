@@ -1,10 +1,6 @@
-import javafx.scene.text.Text;
-
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.util.EventListener;
+
 
 public class QuestionPanel extends JPanel {
     TriviaGame game;
@@ -31,26 +27,26 @@ public class QuestionPanel extends JPanel {
             g.setColor(new Color(255, 255,0 ));
         if (questionTimer.timeLeft<6)
             g.setColor(new Color(255, 0, 0));
-        g.setFont(new Font("Ariel", 1, 50));
+        g.setFont(new Font("Ariel", Font.BOLD, 50));
         g.drawString(String.valueOf(questionTimer.timeLeft),500,100);
         game.repaint();
 
     }
 
     public void timeOut(){
-        JOptionPane.showConfirmDialog(null, "too slow!", "Hangman", JOptionPane.CLOSED_OPTION);
+        JOptionPane.showConfirmDialog(null, "too slow!", "Hangman", JOptionPane.DEFAULT_OPTION);
         game.nextQuestion();
     }
 
     public static class QuestionTextArea extends JTextArea{
         public QuestionTextArea(String text) {
             super(text);
-            setFont(new Font("Ariel", 1, 30));
+            setFont(new Font("Ariel", Font.BOLD, 30));
             setLineWrap(true);
             setWrapStyleWord(true);
             setBackground(Color.LIGHT_GRAY);
             setForeground(new Color(10, 10, 10));
-            setSize(450,200);
+            setBounds(20,10,450,150);
         }
     }
 

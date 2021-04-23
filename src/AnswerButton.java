@@ -15,7 +15,6 @@ public class AnswerButton extends JButton implements MouseListener {
 
     }
 
-    //TODO: ask weather to present next question
     @Override
     public void mouseClicked(MouseEvent e) {
         game.questionPanel.questionTimer.timer.stop();
@@ -45,9 +44,9 @@ public class AnswerButton extends JButton implements MouseListener {
 
     public void showResult(boolean correct){
         if (correct)
-            JOptionPane.showConfirmDialog(null,"Correct!", "Trivia", JOptionPane.CLOSED_OPTION);
+            JOptionPane.showConfirmDialog(null,"Correct!", "Trivia", JOptionPane.DEFAULT_OPTION);
         else
-            JOptionPane.showConfirmDialog(null,"Wrong!", "Trivia", JOptionPane.CLOSED_OPTION);
+            JOptionPane.showConfirmDialog(null,"Wrong!", "Trivia", JOptionPane.DEFAULT_OPTION);
     }
 
     public void askForNext(){
@@ -56,7 +55,6 @@ public class AnswerButton extends JButton implements MouseListener {
             game.nextQuestion();
         else
             game.endGame();
-
     }
 
 }

@@ -4,7 +4,7 @@ import java.awt.event.MouseListener;
 
 class KeyboardButton extends JButton implements MouseListener {
     HangmanGame game;
-    private char buttonLetter;
+    private final char buttonLetter;
 
     public KeyboardButton(char c, HangmanGame game) {
         super(Character.toString(c));
